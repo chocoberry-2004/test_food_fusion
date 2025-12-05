@@ -1,0 +1,157 @@
+/* admin_recipes.css - page-only styles (self-contained) */
+
+:root{
+  --bg: #fafafa;
+  --card: #ffffff;
+  --accent: #ff7043;
+  --accent-dark: #e64a19;
+  --muted: #777;
+  --shadow: 0 8px 24px rgba(16,24,40,0.06);
+  --radius: 12px;
+  --max-width: 1200px;
+}
+
+*{box-sizing:border-box}
+
+body.admin-recipes{
+  margin:0;
+  font-family:Inter, "Segoe UI", Roboto, Arial, sans-serif;
+  background:var(--bg);
+  color:#222;
+  -webkit-font-smoothing:antialiased;
+}
+
+/* Main + layout */
+.main{
+  margin-left:220px;
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+}
+
+.content{
+  padding:20px 28px;
+  max-width:var(--max-width);
+  margin:0 auto;
+  width:100%;
+}
+
+/* Header row */
+.page-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+  margin-bottom:12px;
+  flex-wrap:wrap;
+}
+.page-header h1{
+  margin:0;
+  color:var(--accent-dark);
+  font-size:22px;
+}
+
+/* Actions and search */
+.actions{display:flex;gap:10px;align-items:center}
+.search-form{display:flex;gap:8px;align-items:center}
+.search-form input[type="search"]{
+  padding:9px 12px;border-radius:8px;border:1px solid #e8e8e8;background:#fff;width:260px;
+}
+.search-form button{
+  padding:9px 12px;border-radius:8px;border:none;background:#f0f0f0;cursor:pointer;
+}
+
+/* Buttons */
+.btn{
+  display:inline-block;padding:8px 12px;border-radius:8px;background:#1976d2;color:#fff;text-decoration:none;
+  font-weight:600;font-size:0.9rem;
+}
+.btn.small{padding:6px 9px;font-size:0.85rem}
+.btn.outline{background:transparent;color:#1976d2;border:1px solid #cfe4ff}
+.btn-primary{background:var(--accent);box-shadow:0 8px 20px rgba(255,112,67,0.12)}
+.btn.small.danger{background:#e53935;color:#fff;border:1px solid #c62828}
+.btn.small.danger:hover{background:#c62828;border-color:#b71c1c}
+
+/* Meta row */
+.meta-row{display:flex;gap:20px;align-items:center;margin-bottom:12px;color:var(--muted)}
+.meta-count{font-weight:700;color:#111;margin-left:6px}
+
+/* Table wrapper */
+.table-wrap{background:transparent;border-radius:10px;overflow:hidden;box-shadow:none}
+.recipes-table{
+  width:100%;border-collapse:collapse;background:var(--card);box-shadow:var(--shadow);
+  border-radius:10px;overflow:hidden;
+}
+.recipes-table thead{background:#fbfbfb}
+.recipes-table th,.recipes-table td{
+  padding:12px 14px;text-align:left;border-bottom:1px solid #f2f2f2;font-size:0.95rem;
+}
+.recipes-table th{color:#444;font-weight:700}
+
+/* Thumb */
+.col-thumb img{width:80px;height:56px;object-fit:cover;border-radius:6px;display:block}
+.no-thumb{
+  width:80px;height:56px;display:flex;align-items:center;justify-content:center;background:#f2f2f2;color:#999;border-radius:6px;font-size:12px;
+}
+
+/* Title and chip */
+.title-cell{font-weight:600;color:#111}
+.chip{display:inline-block;padding:6px 8px;border-radius:999px;background:#fff4ef;color:var(--accent-dark);font-weight:700;font-size:0.85rem}
+
+/* Empty */
+.empty{text-align:center;padding:24px;color:var(--muted)}
+
+/* Footer */
+.admin-footer{padding:18px 28px;text-align:center;color:var(--muted)}
+
+/* Responsive: collapse columns into stacked "cards" on small screens */
+@media (max-width: 920px) {
+
+  /* shrink sidebar space */
+  .sidebar{width:64px;padding:18px 10px}
+  .main{margin-left:64px}
+  .page-header{flex-direction:column;align-items:flex-start;gap:10px}
+
+  /* Hide some non-essential table headers on narrow tablets */
+  .recipes-table th:nth-child(3),
+  .recipes-table td:nth-child(3),
+  .recipes-table th:nth-child(4),
+  .recipes-table td:nth-child(4) {
+    display:none;
+  }
+
+  /* Mobile: stacked rows */
+  .recipes-table thead { display: none; }
+  .recipes-table, .recipes-table tbody, .recipes-table tr, .recipes-table td { display: block; width: 100%; }
+  .recipes-table tr {
+    border-radius: 12px;
+    background: var(--card);
+    box-shadow: var(--shadow);
+    margin-bottom: 12px;
+    padding: 12px;
+  }
+  .recipes-table td {
+    padding: 8px 10px;
+    border: none;
+    position: relative;
+  }
+  .recipes-table td:not(.col-thumb):before {
+    content: attr(data-label);
+    display: inline-block;
+    min-width: 90px;
+    font-weight:700;
+    color:#666;
+    margin-right:8px;
+  }
+  .col-actions{display:flex;gap:8px;margin-top:8px}
+  .btn.small{padding:8px 10px}
+  .col-thumb{margin-bottom:8px}
+  .col-thumb img, .no-thumb{width:100px;height:72px}
+}
+
+/* smaller phones */
+@media (max-width: 480px) {
+  .search-form input[type="search"]{width:160px}
+  .recipes-table td:not(.col-thumb):before{min-width:80px;font-size:0.9rem}
+  .page-header h1{font-size:18px}
+}

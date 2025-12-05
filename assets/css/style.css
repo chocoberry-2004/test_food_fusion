@@ -1,0 +1,280 @@
+/* GLOBAL RESET + SHARED STYLES */
+body {
+  font-family: Arial, sans-serif;
+  background: #f8f8f8;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3 {
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: green;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+
+/* === NAVBAR BASE === */
+.navbar {
+  position: fixed;
+  background: #333;
+  color: #fff;
+  width: 100%;
+  padding: 10px 20px;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  width: 90%;
+}
+
+.logo {
+  color: #fff;
+  font-size: 1.5rem;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+/* === HAMBURGER === */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #444;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+
+/* footer */
+.site-footer {
+  background: #222;
+  color: #fff;
+  padding: 40px 20px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.site-footer a {
+  color: #fff;
+  /* links white */
+  text-decoration: none;
+}
+
+.site-footer h2,
+.site-footer h3,
+.site-footer p {
+  color: #fff;
+  /* headings and paragraphs white */
+  margin: 0 0 10px 0;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.footer-brand {
+  flex: 1 1 250px;
+}
+
+.footer-social {
+  flex: 1 1 200px;
+}
+
+.footer-social a img {
+  width: 32px;
+  margin-right: 10px;
+  transition: transform 0.2s;
+}
+
+.footer-social a img:hover {
+  transform: scale(1.1);
+}
+
+.footer-links {
+  flex: 1 1 150px;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  margin-bottom: 8px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  border-top: 1px solid #444;
+  padding-top: 10px;
+  font-size: 0.9rem;
+  color: #fff;
+}
+
+.footer-social img {
+  filter: brightness(0) invert(1);
+  /* makes social icons white if they're SVGs with dark colors */
+  margin-right: 10px;
+}
+
+
+/* Dropdown container */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown button */
+.dropbtn {
+  cursor: pointer;
+  text-decoration: none;
+  padding: 10px;
+}
+
+/* Dropdown content */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 180px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Links inside dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 10px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Hover effect */
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+/* Show the dropdown on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+.cookie-consent {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  z-index: 1000;
+  font-family: Arial, sans-serif;
+  flex-wrap: wrap;
+  /* allows button to move below text on small screens */
+  box-sizing: border-box;
+}
+
+.cookie-consent p {
+  margin: 0;
+  flex: 1 1 60%;
+  /* text takes up max 60% on large screens */
+  min-width: 200px;
+  /* ensures text doesn't shrink too small */
+}
+
+.cookie-consent a {
+  color: #f0a500;
+  text-decoration: underline;
+}
+
+.cookie-consent button {
+  background-color: #f0a500;
+  color: #333;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 5px;
+  flex-shrink: 0;
+  /* prevents shrinking */
+  margin-top: 10px;
+  /* space below text on small screens */
+}
+
+@media (min-width: 600px) {
+  .cookie-consent button {
+    margin-top: 0;
+    /* inline with text on larger screens */
+  }
+}
+
+
+.profile-pic {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+}

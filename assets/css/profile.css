@@ -1,0 +1,125 @@
+/* Container */
+.profile-page {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #fdf6f0, #ffe6d6);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    min-height: 100vh;
+}
+
+/* Card-style form */
+.profile-card {
+    width: 400px;
+    background: #ffffffcc;
+    border-radius: 20px;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+    backdrop-filter: blur(5px);
+}
+
+/* Headings */
+.profile-page h1 {
+    color: #d35400;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.profile-card h2 {
+    color: #e67e22;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Profile picture */
+.profile-page img {
+    display: block;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    width: 130px;
+    height: 130px;
+    object-fit: cover;
+    border: 3px solid #e67e22;
+}
+
+/* Form labels */
+.profile-card label {
+    display: block;
+    margin-top: 10px;
+    font-weight: 600;
+    color: #555;
+}
+
+/* Inputs */
+.profile-card input[type="text"],
+.profile-card input[type="email"],
+.profile-card input[type="password"],
+.profile-card input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    transition: 0.3s;
+}
+
+.profile-card input:focus {
+    border-color: #d35400;
+    outline: none;
+}
+
+/* Buttons */
+.profile-card input[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    background: #d35400;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.profile-card input[type="submit"]:hover {
+    background: #e67e22;
+}
+
+/* Messages */
+.msg {
+    text-align: center;
+    color: green;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.error {
+    text-align: center;
+    color: red;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Logout link */
+.profile-page a {
+    display: inline-block;
+    margin-top: 15px;
+    color: #d35400;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.profile-page a:hover {
+    color: #e67e22;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .profile-card {
+        width: 100%;
+        padding: 20px;
+    }
+}

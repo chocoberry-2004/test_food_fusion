@@ -1,0 +1,215 @@
+/* === Community Page Styles === */
+
+body.community-page {
+    background: #fafafa;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Hero Section */
+.community-hero {
+    text-align: center;
+    padding: 80px 20px;
+    background: url('../images/kitchen_bg_v2.jpg') no-repeat center/cover;
+    color: #fff;
+    height: 70vh;
+}
+
+.community-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: #ff7043;
+}
+
+.community-hero p {
+    font-size: 1.2rem;
+    opacity: 1;
+    color: #ff7043;
+}
+
+/* Main Container */
+.community-main {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* Flash Messages */
+.message {
+    text-align: center;
+    margin-bottom: 20px;
+    color: green;
+    font-weight: bold;
+}
+
+/* Contribute Form */
+.contribute-form {
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+}
+
+.contribute-form h2 {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.contribute-form .form-control {
+    margin-bottom: 15px;
+}
+
+.contribute-form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.contribute-form input,
+.contribute-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+}
+
+.contribute-form .btn-submit {
+    background: #ff7043;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.contribute-form .btn-submit :hover {
+    background: #e64a19;
+}
+
+.btn-clear {
+    background: #555;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+
+/* Entries Grid */
+.community-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+/* Each Card */
+.community-card {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.community-card:hover {
+    transform: translateY(-5px);
+}
+
+.community-card img.entry-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.c-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.c-header .profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.community-card h3 {
+    font-size: 1.3rem;
+    margin: 15px;
+    color: #e64a19;
+}
+
+.community-card p {
+    padding: 0 15px 15px;
+    color: #555;
+    flex-grow: 1;
+}
+
+/* Footer */
+.entry-footer {
+    padding: 12px 15px;
+    border-top: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.like-btn {
+    background: none;
+    border: none;
+    color: #e64a19;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.like-btn:hover {
+    transform: scale(1.2);
+}
+
+.entry-footer span {
+    font-size: 0.85rem;
+    color: #777;
+}
+
+
+.filters {
+    background: #f8f8f8;
+    padding: 15px;
+    margin: 20px auto;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    align-items: center;
+}
+
+.filters label {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.filters select,
+.filters .btn-filter {
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.btn-filter {
+    background: #ff7043;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-filter:hover {
+    background: #e64a19;
+}

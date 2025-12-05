@@ -1,0 +1,120 @@
+
+/* General page styling */
+.resources-page {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f9fdf9;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* Hero section */
+.resources-hero {
+  position: relative;
+  background: url('../images/renewable_energy_bg.jpeg') center/cover no-repeat;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+}
+
+.resources-hero .overlay {
+  background: rgba(0, 60, 30, 0.6);
+  padding: 40px;
+  border-radius: 12px;
+}
+
+.resources-hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+  color: #34d399; 
+}
+
+.resources-hero p {
+  font-size: 1.2rem;
+}
+
+/* Main container */
+.resources-main {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/* Sections */
+.resource-section {
+  margin-bottom: 60px;
+}
+
+.resource-section h2 {
+  font-size: 2rem;
+  color: #065f46; /* dark green */
+  margin-bottom: 10px;
+}
+
+.section-subtitle {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* Grid layout */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+/* Resource cards */
+.resource-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.resource-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+.resource-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: #064e3b;
+}
+
+/* Download/View buttons */
+.btn-download {
+  display: inline-block;
+  background: #10b981; /* emerald green */
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  transition: background 0.2s ease;
+}
+
+.btn-download:hover {
+  background: #059669;
+}
+
+/* Videos */
+.video-card .video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 ratio */
+  height: 0;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.video-card .video-wrapper iframe {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}

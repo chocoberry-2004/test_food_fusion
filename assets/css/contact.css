@@ -1,0 +1,72 @@
+.contact-hero {
+    position: relative;
+    height: 70vh;
+    background: url('../images/ingredients_bg.jpg') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.contact-hero h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.contact-hero .overlay {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+.contact-hero h1 .brand-name {
+    color: #ff7043;
+}
+
+
+.contact-form-section {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+}
+
+.contact-form-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.contact-form .form-group {
+    margin-bottom: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.contact-form .btn-submit {
+    display: block;
+    width: 100%;
+    max-width: 200px;
+    margin: 20px auto 0;
+    padding: 12px;
+    background-color: #ff6f61;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.contact-form .btn-submit:hover {
+    background-color: #ff4b3e;
+}
+
+.form-response {
+    text-align: center;
+    margin-top: 15px;
+    font-weight: bold;
+}

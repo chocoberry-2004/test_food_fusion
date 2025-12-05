@@ -1,0 +1,45 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    /* Full viewport height */
+    margin: 0;
+}
+
+.static-page {
+    flex: 1;
+    max-width: 900px;
+    margin: 0 auto;
+    /* centers horizontally */
+    padding: 120px 40px 60px;
+    /* top padding makes space for navbar */
+    line-height: 1.7;
+    color: #333;
+
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.static-page h1 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    color: #e64a19;
+    text-align: center;
+}
+
+.static-page h2 {
+    margin-top: 30px;
+    font-size: 1.5rem;
+    color: #444;
+}
+
+.static-page p,
+.static-page ul {
+    margin: 15px 0;
+}
+
+.static-page ul {
+    padding-left: 20px;
+    list-style: disc;
+}

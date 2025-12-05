@@ -1,0 +1,103 @@
+.recipes-hero {
+  position: relative;
+  height: 70vh;
+  background: url('../images/kitchen_hero_bg.jpg') no-repeat center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.recipes-hero .overlay {
+  background: rgba(0, 0, 0, 0.55);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+.overlay h1{
+    color: #ff7043;
+}
+
+.recipes-list {
+  padding: 60px 20px;
+}
+
+.recipe-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.recipe-card {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.recipe-card:hover {
+  transform: translateY(-5px);
+}
+
+.recipe-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 15px;
+}
+
+.card-content h3 {
+  margin: 10px 0;
+  color: #e64a19;
+}
+
+.filter-section {
+  background: #f8f8f8;
+  padding: 20px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.filter-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+}
+
+.filter-form label {
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.filter-form select {
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.btn-submit {
+  background: #ff7043;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-clear {
+  background: #555;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+}

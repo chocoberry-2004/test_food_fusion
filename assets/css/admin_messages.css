@@ -1,0 +1,115 @@
+/* admin_messages.css - page-only styles (assumes shared variables in admin_common.css) */
+
+.meta {
+  margin-bottom: 16px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.table-wrap {
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow-x: auto;
+  padding: 8px;
+}
+
+.messages-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.messages-table th,
+.messages-table td {
+  padding: 12px 14px;
+  border-bottom: 1px solid #f2f2f2;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.messages-table th {
+  font-weight: 700;
+  color: #444;
+}
+
+.messages-table td {
+  font-size: 0.95rem;
+}
+
+.col-actions {
+  white-space: nowrap;
+}
+
+.btn.small {
+  padding: 6px 8px;
+  font-size: 13px;
+  border-radius: 6px;
+  background: var(--accent);
+  color: #fff;
+  text-decoration: none;
+  margin-right: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn.small.outline {
+  background: transparent;
+  color: var(--accent-dark);
+  border: 1px solid var(--accent-dark);
+  padding: 5px 8px;
+}
+
+.empty {
+  text-align: center;
+  padding: 20px;
+  color: var(--muted);
+}
+
+/* Modal styling */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal.hidden {
+  display: none;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  width: 520px;
+  max-width: 94%;
+  max-height: 90%;
+  overflow: auto;
+  position: relative;
+}
+
+.modal-close {
+  position: absolute;
+  right: 12px;
+  top: 8px;
+  font-size: 20px;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  color: #444;
+}
+
+@media (max-width: 720px) {
+  .modal-content {
+    padding: 16px;
+    width: 90%;
+  }
+  .messages-table th:nth-child(3),
+  .messages-table td:nth-child(3) {
+    display: none;
+  }
+}

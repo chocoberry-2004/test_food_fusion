@@ -1,0 +1,125 @@
+/* === Recipe Form Page (Create/Edit) === */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #f7f8fa;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+.admin-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 30px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+.admin-container h1 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+  color: #e64a19;
+  text-align: center;
+}
+
+.message {
+  padding: 12px 15px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.message:empty { display: none; }
+.message:contains("✅") { background: #e6f9ed; color: #2e7d32; border: 1px solid #81c784; }
+.message:contains("❌") { background: #fdecea; color: #c62828; border: 1px solid #e57373; }
+
+.admin-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 6px;
+  font-weight: bold;
+  color: #444;
+}
+
+.form-group input[type="text"],
+.form-group input[type="file"],
+.form-group select,
+.form-group textarea {
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #e64a19;
+  box-shadow: 0 0 0 3px rgba(230,74,25,0.15);
+}
+
+textarea {
+  resize: vertical;
+}
+
+.current-img {
+  margin-bottom: 10px;
+}
+
+.current-img img {
+  border-radius: 8px;
+  max-width: 120px;
+  height: auto;
+  border: 1px solid #ddd;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+button[type="submit"] {
+  background: #e64a19;
+  color: #fff;
+  padding: 12px 22px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background: #d84315;
+}
+
+.btn-back {
+  display: inline-block;
+  padding: 10px 18px;
+  background: #f1f1f1;
+  color: #333;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  transition: background 0.3s;
+}
+
+.btn-back:hover {
+  background: #ddd;
+}
