@@ -1,0 +1,13 @@
+{
+    "require": {
+        "php": "^8.0",
+        "ext-mysqli": "*",
+        "ext-pdo": "*",
+        "ext-mbstring": "*"
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "php -r \"if (!extension_loaded('mysqli')) { echo 'MySQLi extension not loaded!'; exit(1); }\""
+        ]
+    }
+}
